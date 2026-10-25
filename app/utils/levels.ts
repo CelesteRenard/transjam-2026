@@ -33,7 +33,26 @@ export const levels: Level[] = [
           ["corner","2_line","2_line"],
           ["corner","corner", ""]
         ]
-      }
+      },
+      {
+      "constraints": [
+        "test",
+        "test 2",
+        " test 3"
+      ],
+      "solution": [
+        [
+          "base",
+          "corner",
+          "corner"
+        ],
+        [
+          "base",
+          "corner",
+          ""
+        ]
+      ]
+    }
     ]
   }
 ]
