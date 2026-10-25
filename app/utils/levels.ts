@@ -98,5 +98,154 @@ export const levels: Level[] = [
         ]
       }
     ]
-  }
+  },
+  {
+  "name": "Muffins",
+  "level": 3,
+  "board": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "puzzles": [
+    {
+      "actor": "/assets/images/gameplay/actors/muffin.png",
+      "dialogue": "Hi ! can you please change my birth flavour. It doesn't suits me any more.",
+      "pieces": [
+        {
+          "block": "base"
+        },
+        {
+          "block": "special_base"
+        },
+        {
+          "block": "Corner_up_right"
+        },
+        {
+          "block": "Corner_up_right"
+        },
+        {
+          "block": "2_line"
+        },
+        {
+          "block": "2_line"
+        },
+        {
+          "block": "2_line"
+        }
+      ],
+      "constraints": [
+        "All 1-squares must be in the center",
+        {
+          "text": "Must not touch corner pieces",
+          "block": "special_base"
+        }
+      ],
+      "solution": [
+        [
+          "Corner_up_right",
+          "Corner_up_right",
+          "Corner_up_right",
+          "Corner_up_right"
+        ],
+        [
+          "2_line",
+          "Corner_up_right",
+          "base",
+          "Corner_up_right"
+        ],
+        [
+          "2_line",
+          "",
+          "special_base",
+          "2_line"
+        ],
+        [
+          "",
+          "2_line",
+          "2_line",
+          "2_line"
+        ]
+      ]
+    },
+    {
+      "actor": "/assets/images/gameplay/actors/muffin2.png",
+      "dialogue": "I don't get why all plushies should know my FAB (flavor assigned at birth). Can you remove it please.",
+      "pieces": [
+        {
+          "block": "base"
+        },
+        {
+          "block": "corner"
+        },
+        {
+          "block": "right_L"
+        },
+        {
+          "block": "corner"
+        },
+        {
+          "block": "3_line"
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Have 3 neighbours",
+          "block": "corner"
+        },
+        {
+          "text": "Cannot be on bottom row",
+          "block": "right_L"
+        }
+      ],
+      "solution": [
+        [
+          "corner",
+          "corner",
+          "right_L",
+          "right_L"
+        ],
+        [
+          "corner",
+          "corner",
+          "corner",
+          "right_L"
+        ],
+        [
+          "base",
+          "",
+          "corner",
+          "right_L"
+        ],
+        [
+          "",
+          "3_line",
+          "3_line",
+          "3_line"
+        ]
+      ]
+    }
+  ]
+}
 ]
