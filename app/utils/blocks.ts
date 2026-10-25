@@ -10,6 +10,14 @@ export const blocks : b = [
     ]
   },
   {
+    name: "special_base",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    rotable: false,
+    shape: [
+      [1]
+    ]
+  },
+  {
     name: "corner",
     picto: "/assets/images/gameplay/indentifiers/indentifiers_04.jpg",
     rotable: true,
@@ -62,7 +70,34 @@ export const blocks : b = [
     ]
   },
   {
-    name: "Corner_No_Rotate_1",
+    name: "Corner_up_right",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    rotable: false,
+    shape: [
+      [1, 1],
+      [1, 0]
+    ]
+  },
+  {
+    name: "Corner_up_left",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    rotable: false,
+    shape: [
+      [1, 1],
+      [0, 1]
+    ]
+  },
+  {
+    name: "Corner_down_left",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    rotable: false,
+    shape: [
+      [1, 0],
+      [1, 1]
+    ]
+  },
+  {
+    name: "Corner_down_right",
     picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [

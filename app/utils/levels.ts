@@ -35,7 +35,7 @@ export const levels: Level[] = [
             ]
           },
           {
-            "block": "Corner_No_Rotate_1",
+            "block": "Corner_down_right",
             "tiles": [
               "assets/images/gameplay/tiles/seal/tile_seal_1.jpg",
               "assets/images/gameplay/tiles/seal/tile_seal_2.jpg",
