@@ -58,7 +58,7 @@ export const levels: Level[] = [
           {
             "block": "base_Celeste_3",
             "tiles": [
-              "assets/images/gameplay/tiles/certificate/tile_certificate_1.jpg"
+              "assets/images/gameplay/tiles/fingerprint/tile_fingerprint_1.jpg"
             ]
           }
         ],
