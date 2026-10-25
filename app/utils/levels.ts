@@ -233,7 +233,7 @@ export const levels: Level[] = [
           "block": "corner_3_neighbours"
         },
         {
-          "block": "right_L"
+          "block": "right_L_no_bottom"
         },
         {
           "block": "corner_3_neighbours"
@@ -249,27 +249,31 @@ export const levels: Level[] = [
         },
         {
           "text": "Cannot be on bottom row",
-          "block": "right_L"
+          "block": "right_L_no_bottom"
+        },
+        { 
+           "text": "Must be on the left",
+           "block": "base_left"
         }
       ],
       "solution": [
         [
           "corner_3_neighbours",
           "corner_3_neighbours",
-          "right_L",
-          "right_L"
+          "right_L_no_bottom",
+          "right_L_no_bottom"
         ],
         [
           "corner_3_neighbours",
           "corner_3_neighbours",
           "corner_3_neighbours",
-          "right_L"
+          "right_L_no_bottom"
         ],
         [
           "base_left",
           "",
           "corner_3_neighbours",
-          "right_L"
+          "right_L_no_bottom"
         ],
         [
           "",

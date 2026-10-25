@@ -10,7 +10,7 @@ export const blocks : b = [
   },
   {
     name: "base_no_corner",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    picto: "/assets/images/ui/instructions/no_touch.svg",
     rotable: false,
     shape: [
       [1]
