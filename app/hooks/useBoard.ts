@@ -138,5 +138,5 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
 
   }
 
-  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag: setDragging, endDrag, hoverCell, solved: isSolved(board, placed), resetBoard }
+  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag: setDragging, endDrag, hoverCell, solved: isSolved(board, placed, pieces.map((p) => p.name), puzzle.solution), resetBoard }
 }
