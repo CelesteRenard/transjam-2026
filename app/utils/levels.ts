@@ -64,19 +64,19 @@ export const levels: Level[] = [
         ],
         "constraints": [
           {
-            "text": "Must have 3 Adjacent Unique Items",
+            "text": "Must have Exactly 3 Adjacent Unique Pieces",
             "block": "2x1_No_Rotate_1"
           },
           {
-            "text": "Must have 1 Adjacent Unique Items",
+            "text": "Must have Exactly 1 Adjacent Unique Pieces",
             "block": "base_Celeste_1"
           },
           {
-            "text": "Must have 2 Adjacent Unique Items",
+            "text": "Must have Exactly 2 Adjacent Unique Pieces",
             "block": "base_Celeste_2"
           },
           {
-            "text": "Must be on Bottom Row",
+            "text": "Must be on the Bottom Row",
             "block": "base_Celeste_3"
           }
         ],
@@ -138,13 +138,13 @@ export const levels: Level[] = [
           "block": "base"
         },
         {
-          "block": "special_base"
+          "block": "base_no_corner"
         },
         {
-          "block": "Corner_up_right"
+          "block": "Corner_up_right_no_bottom"
         },
         {
-          "block": "Corner_up_right"
+          "block": "Corner_up_right_no_bottom"
         },
         {
           "block": "2_line"
@@ -160,26 +160,30 @@ export const levels: Level[] = [
         "All 1-squares must be in the center",
         {
           "text": "Must not touch corner pieces",
-          "block": "special_base"
+          "block": "base_no_corner"
+        },
+        {
+           "text": "Corner pieces cannot touch bottom row",
+           "block": "Corner_up_right_no_bottom"
         }
       ],
       "solution": [
         [
-          "Corner_up_right",
-          "Corner_up_right",
-          "Corner_up_right",
-          "Corner_up_right"
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom"
         ],
         [
           "2_line",
-          "Corner_up_right",
+          "Corner_up_right_no_bottom",
           "base",
-          "Corner_up_right"
+          "Corner_up_right_no_bottom"
         ],
         [
           "2_line",
           "",
-          "special_base",
+          "base_no_corner",
           "2_line"
         ],
         [
@@ -195,16 +199,16 @@ export const levels: Level[] = [
       "dialogue": "I don't get why all plushies should know my FAB (flavor assigned at birth). Can you remove it please.",
       "pieces": [
         {
-          "block": "base"
+          "block": "base_left"
         },
         {
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "block": "right_L"
         },
         {
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "block": "3_line"
@@ -213,7 +217,7 @@ export const levels: Level[] = [
       "constraints": [
         {
           "text": "Have 3 neighbours",
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "text": "Cannot be on bottom row",
@@ -222,21 +226,21 @@ export const levels: Level[] = [
       ],
       "solution": [
         [
-          "corner",
-          "corner",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
           "right_L",
           "right_L"
         ],
         [
-          "corner",
-          "corner",
-          "corner",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
           "right_L"
         ],
         [
-          "base",
+          "base_left",
           "",
-          "corner",
+          "corner_3_neighbours",
           "right_L"
         ],
         [
