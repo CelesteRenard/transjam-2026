@@ -25,7 +25,7 @@ export const levels: Level[] = [
           }
         ],
         constraints: [
-          { text: "Birth Date must have 3 Unique Adjacent Items", block: "2_line" },
+          { text: "Birth Date must have 1 Unique Adjacent Items", block: "2_line" },
           { text: "Seal must TOUCH BOTTOM ROW", block: "corner" }
         ],
 
