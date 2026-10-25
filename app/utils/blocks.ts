@@ -134,7 +134,7 @@ export const blocks : b = [
   },
   {
     name: "2x1_No_Rotate_1",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_02.jpg",
+    picto: "/assets/images/ui/instructions/3_neighbours.svg",
     rotable: false,
     shape: [
       [1, 1],
@@ -150,7 +150,7 @@ export const blocks : b = [
   },
   {
     name: "base_Celeste_1",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_03.jpg",
+    picto: "/assets/images/ui/instructions/1_neighbour.svg",
     rotable: false,
     shape: [
       [1]
@@ -158,7 +158,7 @@ export const blocks : b = [
   },
   {
     name: "base_Celeste_2",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_04.jpg",
+    picto: "/assets/images/ui/instructions/2_neighbours.svg",
     rotable: false,
     shape: [
       [1]
@@ -166,7 +166,7 @@ export const blocks : b = [
   },
   {
     name: "base_Celeste_3",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_05.jpg",
+    picto: "/assets/images/ui/instructions/bottom.svg",
     rotable: false,
     shape: [
       [1]
