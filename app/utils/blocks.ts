@@ -114,6 +114,14 @@ export const blocks : b = [
     ]
   },
   {
+    name: "1x2_No_Rotate_1",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_02.jpg",
+    rotable: false,
+    shape: [
+      [1, 1],
+    ]
+  },
+  {
     name: "base_Celeste_1",
     picto: "/assets/images/gameplay/indentifiers/indentifiers_03.jpg",
     rotable: false,
