@@ -3,7 +3,7 @@ import type { blocks as b } from "~/types/Shape"
 export const blocks : b = [
   {
     name: "base",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
+    picto: "",
     rotable: false,
     shape: [
       [1]

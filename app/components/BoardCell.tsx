@@ -1,5 +1,5 @@
 import type { Placed } from "~/types/Shape"
-import { TILE_CLASS } from "~/utils/constants"
+import { OVERLAP_CLASS, TILE_CLASS } from "~/utils/constants"
 import { allowDrop, setDragPayload, setPieceDragImage, type DragPayload } from "~/utils/drag"
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
 }
 
 export const BoardCell = ({ row, col, blocked, piece, preview, onDrop, onHover, onRotatePiece, onDragStart, onDragEnd }: Props) => {
-  if (blocked) return <div className="h-(--cell) w-(--cell)" />
+  if (blocked) return <div className={`h-(--cell) w-(--cell) ${OVERLAP_CLASS}`} />
 
   const tile = piece?.tiles[row - piece.row][col - piece.col]
 
@@ -46,7 +46,7 @@ export const BoardCell = ({ row, col, blocked, piece, preview, onDrop, onHover, 
       }}
       onDrop={(e) => onDrop(e, row, col)}
       style={tile?.image ? { backgroundImage: `url(${tile.image})` } : undefined}
-      className={`relative h-(--cell) w-(--cell) ${piece ? `${TILE_CLASS} cursor-grab` : "border-2 border-gray-400 bg-black/10"}`}
+      className={`relative h-(--cell) w-(--cell) ${OVERLAP_CLASS} ${piece ? `${TILE_CLASS} z-10 cursor-grab` : "border-2 border-gray-400 bg-black/10"}`}
     >
       {tile?.picto && <img src={tile.picto} alt="" className="pointer-events-none absolute left-1 top-1 h-[calc(var(--cell)/4)] w-[calc(var(--cell)/4)]" />}
       {preview !== undefined && (

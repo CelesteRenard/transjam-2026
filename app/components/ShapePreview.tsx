@@ -23,7 +23,7 @@ export const ShapePreview = ({
             }}
           />
         ) : (
-          <div key={`${r}-${c}`} className="pointer-events-none h-(--cell) w-(--cell)" />
+          <div key={`${r}-${c}`} className="pointer-events-none -mr-0.5 -mb-0.5 h-(--cell) w-(--cell)" />
         )
       )
     )}
