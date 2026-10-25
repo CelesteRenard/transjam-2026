@@ -46,7 +46,7 @@ export const BoardCell = ({ row, col, blocked, piece, preview, onDrop, onHover, 
       }}
       onDrop={(e) => onDrop(e, row, col)}
       style={tile?.image ? { backgroundImage: `url(${tile.image})` } : undefined}
-      className={`relative h-(--cell) w-(--cell) ${piece ? `${TILE_CLASS} cursor-grab` : "border-2 border-gray-400"}`}
+      className={`relative h-(--cell) w-(--cell) ${piece ? `${TILE_CLASS} cursor-grab` : "border-2 border-gray-400 bg-black/10"}`}
     >
       {tile?.picto && <img src={tile.picto} alt="" className="pointer-events-none absolute left-1 top-1 h-[calc(var(--cell)/4)] w-[calc(var(--cell)/4)]" />}
       {preview !== undefined && (
