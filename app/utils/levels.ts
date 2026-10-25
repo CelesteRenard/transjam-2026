@@ -135,25 +135,53 @@ export const levels: Level[] = [
       "dialogue": "Hi ! can you please change my birth flavour. It doesn't suits me any more.",
       "pieces": [
         {
-          "block": "base"
+          "block": "base",
+          "tiles": [
+             "/assets/images/gameplay/tiles/pfp/tile_pfp_2.jpg"
+          ]
         },
         {
-          "block": "base_no_corner"
+          "block": "base_no_corner",
+          "tiles": [
+             "/assets/images/gameplay/tiles/flavors/flavor_name.png",
+          ],
         },
         {
-          "block": "Corner_up_right_no_bottom"
+          "block": "Corner_up_right_no_bottom",
+          "tiles":[
+             "/assets/images/gameplay/tiles/certificate/cakedom_1.png",
+             "/assets/images/gameplay/tiles/certificate/cakedom_2.png",
+             "/assets/images/gameplay/tiles/flavors/strawberry.png"
+          ]
         },
         {
-          "block": "Corner_up_right_no_bottom"
+          "block": "Corner_up_right_no_bottom",
+          "tiles":[
+             "/assets/images/gameplay/tiles/birthday/tile_bd_2.jpg",
+             "/assets/images/gameplay/tiles/birthday/tile_bd_1.jpg",
+             "/assets/images/gameplay/tiles/flavors/blueberry.png"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/flavors/banana.png",
+             "/assets/images/gameplay/tiles/flavors/orange.png"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/flavors/17_06.png",
+             "/assets/images/gameplay/tiles/flavors/tile_seal_2.png"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/flavors/tile_seal3.png",
+             "/assets/images/gameplay/tiles/flavors/tile_seal1.png"
+          ]
         }
       ],
       "constraints": [
