@@ -3,14 +3,13 @@ import type { blocks as b } from "~/types/Shape"
 export const blocks : b = [
   {
     name: "base",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [1]
     ]
   },
   {
-    name: "special_base",
+    name: "base_no_corner",
     picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
@@ -19,7 +18,15 @@ export const blocks : b = [
   },
   {
     name: "corner",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_04.jpg",
+    rotable: true,
+    shape: [
+      [1, 0],
+      [1,1]
+    ]
+  },
+  {
+    name: "corner_3_neighbours",
+    picto: "/assets/images/ui/instructions/3_neighbours.svg",
     rotable: true,
     shape: [
       [1, 0],
@@ -28,7 +35,6 @@ export const blocks : b = [
   },
   {
     name: "2_line",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_03.jpg",
     rotable: true,
     shape: [
       [1, 1]
@@ -36,7 +42,6 @@ export const blocks : b = [
   },
   {
     name: "3_line",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_05.jpg",
     rotable: true,
     shape: [
       [1, 1, 1]
@@ -44,6 +49,16 @@ export const blocks : b = [
   },
   {
     name: "right_L",
+    rotable: true,
+    shape: [
+      [1, 0],
+      [1, 0],
+      [1, 1],
+    ]
+  },
+  {
+    name: "right_L_no_bottom",
+    picto: "/assets/images/ui/instructions/no_bottom.svg",
     rotable: true,
     shape: [
       [1, 0],
@@ -62,7 +77,6 @@ export const blocks : b = [
   },
   {
     name: "2x2",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_02.jpg",
     rotable: false,
     shape: [
       [1, 1],
@@ -71,7 +85,6 @@ export const blocks : b = [
   },
   {
     name: "Corner_up_right",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [1, 1],
@@ -80,7 +93,6 @@ export const blocks : b = [
   },
   {
     name: "Corner_up_left",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [1, 1],
@@ -89,7 +101,6 @@ export const blocks : b = [
   },
   {
     name: "Corner_down_left",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [1, 0],
@@ -98,7 +109,6 @@ export const blocks : b = [
   },
   {
     name: "Corner_down_right",
-    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [0, 1],
