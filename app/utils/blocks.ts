@@ -92,6 +92,15 @@ export const blocks : b = [
     ]
   },
   {
+    name: "Corner_up_right_no_bottom",
+    rotable: false,
+    picto: "/assets/images/ui/instructions/no_bottom.svg",
+    shape: [
+      [1, 1],
+      [0, 1]
+    ]
+  },
+  {
     name: "Corner_up_left",
     rotable: false,
     shape: [
