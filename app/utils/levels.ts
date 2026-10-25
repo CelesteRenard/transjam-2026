@@ -25,7 +25,8 @@ export const levels: Level[] = [
     ],
     "puzzles": [
       {
-        "dialogue": "Celeste n2's Puzzle",
+        "actor": "/assets/images/gameplay/actors/shark.png",
+        "dialogue": "Hello! I'm Shark, can you make my ID?",
         "pieces": [
           {
             "block": "2x1_No_Rotate_1",
