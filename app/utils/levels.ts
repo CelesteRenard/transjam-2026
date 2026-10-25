@@ -88,12 +88,12 @@ export const levels: Level[] = [
           [
             "",
             "base_Celeste_2",
-            "Corner_No_Rotate_1"
+            "Corner_down_right"
           ],
           [
             "base_Celeste_3",
-            "Corner_No_Rotate_1",
-            "Corner_No_Rotate_1"
+            "Corner_down_right",
+            "Corner_down_right"
           ]
         ]
       }
