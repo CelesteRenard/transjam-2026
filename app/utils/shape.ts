@@ -30,5 +30,11 @@ export const canPlace = (
 export const findOwner = (placed: Placed[], row: number, col: number) =>
   placed.find((p) => p.shape[row - p.row]?.[col - p.col] === 1)
 
-export const isSolved = (board: number[][], placed: Placed[]) =>
-  board.every((line, r) => line.every((v, c) => !v || !!findOwner(placed, r, c)))
+export const isSolved = (board: number[][], placed: Placed[], names: string[], solution: string[][]) =>
+  board.every((line, r) =>
+    line.every((v, c) => {
+      if (!v) return true
+      const owner = findOwner(placed, r, c)
+      return !!owner && names[owner.blockIndex]?.toLowerCase() === solution[r]?.[c]?.toLowerCase()
+    })
+  )
