@@ -1,15 +1,28 @@
+export type Shape = number[][]
+
+export type Tile = { image?: string; picto?: string }
+
+export type Tiles = (Tile | undefined)[][]
+
 export type blocks = {
   name: string
   rotable: boolean
-  shape: Array<Array<number>>
+  picto?: string
+  shape: Shape
 }[]
 
-export type Shape = number[][]
+export type Piece = {
+  name: string
+  rotable: boolean
+  shape: Shape
+  tiles: Tiles
+}
 
 export type Placed = {
   id: number
-  color: string
+  blockIndex: number
   shape: Shape
+  tiles: Tiles
   row: number
   col: number
 }

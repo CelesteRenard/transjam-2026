@@ -13,3 +13,8 @@ body {
     color-scheme: dark;
   }
 }
+
+:root {
+  /* size of one cell, updated from the screen size (see utils/cellSize.ts) */
+  --cell: 96px;
+}

@@ -3,13 +3,15 @@ import type { blocks as b } from "~/types/Shape"
 export const blocks : b = [
   {
     name: "base",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_01.jpg",
     rotable: false,
     shape: [
       [1]
     ]
   },
   {
-    name: "Corner",
+    name: "corner",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_04.jpg",
     rotable: true,
     shape: [
       [1, 0],
@@ -18,6 +20,7 @@ export const blocks : b = [
   },
   {
     name: "2_line",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_03.jpg",
     rotable: true,
     shape: [
       [1, 1]
@@ -25,6 +28,7 @@ export const blocks : b = [
   },
   {
     name: "3_line",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_05.jpg",
     rotable: true,
     shape: [
       [1, 1, 1]
@@ -50,6 +54,7 @@ export const blocks : b = [
   },
   {
     name: "2x2",
+    picto: "/assets/images/gameplay/indentifiers/indentifiers_02.jpg",
     rotable: false,
     shape: [
       [1, 1],
