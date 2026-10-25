@@ -199,7 +199,7 @@ export const levels: Level[] = [
       "dialogue": "I don't get why all plushies should know my FAB (flavor assigned at birth). Can you remove it please.",
       "pieces": [
         {
-          "block": "base"
+          "block": "base_left"
         },
         {
           "block": "corner_3_neighbours"
@@ -238,7 +238,7 @@ export const levels: Level[] = [
           "right_L"
         ],
         [
-          "base",
+          "base_left",
           "",
           "corner_3_neighbours",
           "right_L"

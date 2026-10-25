@@ -17,6 +17,14 @@ export const blocks : b = [
     ]
   },
   {
+    name: "base_left",
+    picto: "/assets/images/ui/instructions/on_left.svg",
+    rotable: false,
+    shape: [
+      [1]
+    ]
+  },
+  {
     name: "corner",
     rotable: true,
     shape: [
