@@ -64,19 +64,19 @@ export const levels: Level[] = [
         ],
         "constraints": [
           {
-            "text": "Must have 3 Adjacent Unique Items",
+            "text": "Must have Exactly 3 Adjacent Unique Pieces",
             "block": "2x1_No_Rotate_1"
           },
           {
-            "text": "Must have 1 Adjacent Unique Items",
+            "text": "Must have Exactly 1 Adjacent Unique Pieces",
             "block": "base_Celeste_1"
           },
           {
-            "text": "Must have 2 Adjacent Unique Items",
+            "text": "Must have Exactly 2 Adjacent Unique Pieces",
             "block": "base_Celeste_2"
           },
           {
-            "text": "Must be on Bottom Row",
+            "text": "Must be on the Bottom Row",
             "block": "base_Celeste_3"
           }
         ],
