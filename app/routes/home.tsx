@@ -3,7 +3,7 @@ import { ShapePreview } from "~/components/ShapePreview"
 import type { Placed, Shape } from "~/types/Shape"
 import { blocks } from "../utils/blocks"
 
-const GRID_SIZE = 3
+const GRID_SIZE = 4
 const COLORS = ["bg-sky-500", "bg-emerald-500", "bg-amber-500", "bg-rose-500", "bg-violet-500"]
 
 const rotate = (shape: Shape): Shape =>
@@ -69,7 +69,7 @@ const Home = () => {
     <main className="mx-auto flex max-w-xl flex-col items-center gap-8 p-8">
       <h1 className="text-3xl font-bold dark:text-white">TransJam 2026</h1>
 
-      <div className="grid grid-cols-3 gap-1">
+      <div className="grid grid-cols-4 gap-1">
         {Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, i) => {
           const row = Math.floor(i / GRID_SIZE)
           const col = i % GRID_SIZE
