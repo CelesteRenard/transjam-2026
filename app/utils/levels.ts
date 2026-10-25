@@ -141,10 +141,10 @@ export const levels: Level[] = [
           "block": "base_no_corner"
         },
         {
-          "block": "Corner_up_right"
+          "block": "Corner_up_right_no_bottom"
         },
         {
-          "block": "Corner_up_right"
+          "block": "Corner_up_right_no_bottom"
         },
         {
           "block": "2_line"
@@ -161,20 +161,24 @@ export const levels: Level[] = [
         {
           "text": "Must not touch corner pieces",
           "block": "base_no_corner"
+        },
+        {
+           "text": "Corner pieces cannot touch bottom row",
+           "block": "Corner_up_right_no_bottom"
         }
       ],
       "solution": [
         [
-          "Corner_up_right",
-          "Corner_up_right",
-          "Corner_up_right",
-          "Corner_up_right"
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom",
+          "Corner_up_right_no_bottom"
         ],
         [
           "2_line",
-          "Corner_up_right",
+          "Corner_up_right_no_bottom",
           "base",
-          "Corner_up_right"
+          "Corner_up_right_no_bottom"
         ],
         [
           "2_line",
@@ -195,7 +199,7 @@ export const levels: Level[] = [
       "dialogue": "I don't get why all plushies should know my FAB (flavor assigned at birth). Can you remove it please.",
       "pieces": [
         {
-          "block": "base"
+          "block": "base_left"
         },
         {
           "block": "corner_3_neighbours"
@@ -234,7 +238,7 @@ export const levels: Level[] = [
           "right_L"
         ],
         [
-          "base",
+          "base_left",
           "",
           "corner_3_neighbours",
           "right_L"

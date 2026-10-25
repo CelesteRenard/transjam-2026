@@ -15,7 +15,7 @@ export const Game = ({ level, puzzle, onNext }: { level: Level; puzzle: Puzzle, 
   return (
     <div className="flex h-screen w-full flex-col overflow-hidden">
       <Stage day={level.level} actor={puzzle.actor} dialogue={puzzle.dialogue} />
-      <div className="grid h-1/3 shrink-0 grid-cols-3 divide-x-2 divide-black">
+      <div className="grid h-2/3 shrink-0 grid-cols-3 divide-x-2 divide-black">
         <div className="relative overflow-hidden">
           {!solved &&
             <Tray

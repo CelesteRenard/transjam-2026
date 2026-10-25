@@ -1,7 +1,7 @@
 import type { DragEvent } from "react"
 import type { Placed } from "~/types/Shape"
 import { getCellSize } from "./cellSize"
-import { TILE_CLASS } from "./constants"
+import { CELL_OVERLAP, OVERLAP_CLASS, TILE_CLASS } from "./constants"
 
 export type DragPayload = {
   kind: "new" | "move"
@@ -37,6 +37,7 @@ export const setPieceDragImage = (
     line.forEach((v, c) => {
       const cell = document.createElement("div")
       cell.style.height = `${cellSize}px`
+      cell.className = OVERLAP_CLASS
       const tile = piece.tiles[r][c]
       if (v) {
         cell.className = TILE_CLASS
@@ -54,7 +55,7 @@ export const setPieceDragImage = (
   )
   document.body.appendChild(ghost)
 
-  const pitch = cellSize + CELL_GAP
+  const pitch = cellSize + CELL_GAP - CELL_OVERLAP
   e.dataTransfer.setDragImage(ghost, offsetCol * pitch + fx * cellSize, offsetRow * pitch + fy * cellSize)
   setTimeout(() => ghost.remove(), 0)
 }

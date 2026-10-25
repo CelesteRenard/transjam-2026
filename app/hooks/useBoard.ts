@@ -1,3 +1,4 @@
+import { Howl } from 'howler'
 import { useState } from "react"
 import type { Puzzle } from "~/types/Level"
 import type { Placed, Shape, Tiles } from "~/types/Shape"
@@ -7,6 +8,12 @@ import { getPuzzlePieces } from "~/utils/puzzle"
 import { canPlace, isSolved, rotate } from "~/utils/shape"
 
 const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), Math.max(min, max))
+
+const sounds: Partial<Record<"pick" | "place" | "rotate", Howl>> = {}
+const playSound = (name: "pick" | "place" | "rotate") => {
+  if (typeof window === "undefined") return
+  ;(sounds[name] ??= new Howl({ src: [`/audio/fx/${name}.ogg`] })).play()
+}
 
 export const useBoard = (board: number[][], puzzle: Puzzle) => {
   let pieces = getPuzzlePieces(puzzle)
@@ -25,10 +32,17 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
   const [dragging, setDragging] = useState<DragPayload | null>(null)
   const [hover, setHover] = useState<{ row: number; col: number } | null>(null)
 
-  const rotateShape = (index: number) =>
+  const rotateShape = (index: number) => {
+    playSound("rotate")
     setOrientations(
       orientations.map((o, i) => (i === index ? { shape: rotate(o.shape), tiles: rotate(o.tiles) } : o))
     )
+  }
+
+  const startDrag = (payload: DragPayload) => {
+    playSound("pick")
+    setDragging(payload)
+  }
 
   const endDrag = () => {
     setDragging(null)
@@ -46,6 +60,7 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
     if (kind === "new") {
       if (placed.some((p) => p.blockIndex === id)) return
       if (!canPlace(board, placed, orientations[id].shape, top, left)) return
+      playSound("place")
       setPlaced([
         ...placed,
         { id: nextId, blockIndex: id, ...orientations[id], row: top, col: left },
@@ -54,6 +69,7 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
     } else {
       const piece = placed.find((p) => p.id === id)
       if (!piece || !canPlace(board, placed, piece.shape, top, left, id)) return
+      playSound("place")
       setPlaced(placed.map((p) => (p.id === id ? { ...p, row: top, col: left } : p)))
     }
   }
@@ -68,6 +84,7 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
       { row: piece.row, col: piece.col },
     ]
     const anchor = anchors.find((a) => canPlace(board, placed, shape, a.row, a.col, id))
+    if (anchor) playSound("rotate")
     if (anchor) setPlaced(placed.map((p) => (p.id === id ? { ...p, shape, tiles, ...anchor } : p)))
   }
 
@@ -138,5 +155,5 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
 
   }
 
-  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag: setDragging, endDrag, hoverCell, solved: isSolved(board, placed, pieces.map((p) => p.name), puzzle.solution), resetBoard }
+  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag, endDrag, hoverCell, solved: isSolved(board, placed, pieces.map((p) => p.name), puzzle.solution), resetBoard }
 }
