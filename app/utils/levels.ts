@@ -4,55 +4,99 @@ const tiles = "/assets/images/gameplay/tiles"
 
 export const levels: Level[] = [
   {
-    name: 'Beginner',
-    level: 1,
-    board:[
-      [1, 1, 1],
-      [1, 1, 0],
+    "name": "Test_Celeste_01",
+    "level": 1,
+    "board": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
     ],
-    puzzles:[
+    "puzzles": [
       {
-        actor: "/assets/images/gameplay/actors/shark.png",
-        dialogue: "Welcome ! Fill in my form, and do not forget the seal.",
-        pieces: [
+        "dialogue": "Celeste n2's Puzzle",
+        "pieces": [
           {
-            block: "corner",
-            tiles: [`${tiles}/seal/tile_seal_3.jpg`, `${tiles}/seal/tile_seal_2.jpg`, `${tiles}/seal/tile_seal_1.jpg`]
+            "block": "2x1_No_Rotate_1",
+            "tiles": [
+              "assets/images/gameplay/tiles/birthday/tile_bd_1.jpg",
+              "assets/images/gameplay/tiles/birthday/tile_bd_2.jpg"
+            ]
           },
           {
-            block: "2_line",
-            tiles: [`${tiles}/birthday/tile_bd_2.jpg`, `${tiles}/birthday/tile_bd_1.jpg`]
+            "block": "Corner_down_right",
+            "tiles": [
+              "assets/images/gameplay/tiles/seal/tile_seal_1.jpg",
+              "assets/images/gameplay/tiles/seal/tile_seal_2.jpg",
+              "assets/images/gameplay/tiles/seal/tile_seal_3.jpg"
+            ]
+          },
+          {
+            "block": "base_Celeste_1",
+            "tiles": [
+              "assets/images/gameplay/tiles/pfp/tile_pfp_1.jpg"
+            ]
+          },
+          {
+            "block": "base_Celeste_2",
+            "tiles": [
+              "assets/images/gameplay/tiles/certificate/tile_certificate_1.jpg"
+            ]
+          },
+          {
+            "block": "base_Celeste_3",
+            "tiles": [
+              "assets/images/gameplay/tiles/certificate/tile_certificate_1.jpg"
+            ]
           }
         ],
-        constraints: [
-          { text: "Birth Date must have 1 Unique Adjacent Items", block: "2_line" },
-          { text: "Seal must TOUCH BOTTOM ROW", block: "corner" }
+        "constraints": [
+          {
+            "text": "Must have 3 Adjacent Unique Items",
+            "block": "2x1_No_Rotate_1"
+          },
+          {
+            "text": "Must have 1 Adjacent Unique Items",
+            "block": "base_Celeste_1"
+          },
+          {
+            "text": "Must have 2 Adjacent Unique Items",
+            "block": "base_Celeste_2"
+          },
+          {
+            "text": "Must be on Bottom Row",
+            "block": "base_Celeste_3"
+          }
         ],
-
-        solution: [
-          ["corner","2_line","2_line"],
-          ["corner","corner", ""]
+        "solution": [
+          [
+            "base_Celeste_1",
+            "2x1_No_Rotate_1",
+            "2x1_No_Rotate_1"
+          ],
+          [
+            "",
+            "base_Celeste_2",
+            "Corner_No_Rotate_1"
+          ],
+          [
+            "base_Celeste_3",
+            "Corner_No_Rotate_1",
+            "Corner_No_Rotate_1"
+          ]
         ]
-      },
-      {
-      "constraints": [
-        "test",
-        "test 2",
-        " test 3"
-      ],
-      "solution": [
-        [
-          "base",
-          "corner",
-          "corner"
-        ],
-        [
-          "base",
-          "corner",
-          ""
-        ]
-      ]
-    }
+      }
     ]
   }
 ]
