@@ -11,6 +11,7 @@
    inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -24,66 +25,147 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
      inkscape:zoom="2.7677154"
-     inkscape:cx="63.229045"
-     inkscape:cy="71.900457"
+     inkscape:cx="65.396897"
+     inkscape:cy="55.28025"
      inkscape:window-width="1325"
      inkscape:window-height="625"
-     inkscape:window-x="167"
-     inkscape:window-y="178"
+     inkscape:window-x="92"
+     inkscape:window-y="255"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs1" />
+     id="defs1">
+    <linearGradient
+       id="swatch5"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#c6262e;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="swatch4"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#c6262e;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="swatch3"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#c6262e;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#68d600;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffab2d;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch1"
+       id="linearGradient1"
+       x1="38.151951"
+       y1="64"
+       x2="89.848049"
+       y2="64"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.64403917,0,0,0.61553135,22.781493,24.605994)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch2"
+       id="linearGradient2"
+       x1="97.226817"
+       y1="64"
+       x2="110.77318"
+       y2="64"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2137873,0,0,2.1030105,-126.23388,-70.592672)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch2"
+       id="linearGradient5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.2137873,0,0,2.1030105,-166.38828,-34.469696)"
+       x1="97.226817"
+       y1="64"
+       x2="110.77318"
+       y2="64" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#e7c591;stroke:#1e1e1e;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0.13877551;stroke:none;stroke-width:1.502;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
+       id="rect5"
+       width="119.95453"
+       height="118.50929"
+       x="0"
+       y="0.36130881"
+       rx="2.7755576e-17" />
+    <rect
+       style="fill:url(#linearGradient1);stroke:#1e1e1e;stroke-width:1.26177;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect1"
-       width="50.696098"
-       height="50.696098"
-       x="38.651951"
-       y="38.651951" />
-    <circle
-       style="fill:#68b723;stroke:#1e1e1e;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none;stroke-opacity:1"
-       id="path2"
-       cx="64"
-       cy="19"
-       r="6.5231833" />
-    <circle
-       style="fill:#68b723;stroke:#1e1e1e;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stroke-dasharray:none;fill-opacity:1;stroke-opacity:1"
+       width="32.650272"
+       height="31.205038"
+       x="47.674862"
+       y="48.39748" />
+    <ellipse
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke:#1e1e1e;stroke-width:2.80931;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path2-6"
        cx="104"
        cy="64"
-       r="6.5231829" />
+       rx="14.44094"
+       ry="13.718322" />
+    <ellipse
+       style="fill:url(#linearGradient5);fill-opacity:1;stroke:#1e1e1e;stroke-width:2.80931;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path2-6-6"
+       cx="63.845596"
+       cy="100.12298"
+       rx="14.44094"
+       ry="13.718322" />
     <g
        id="g2"
-       transform="matrix(0.90390424,0,0,0.74757588,4.863252,42.440593)"
-       style="fill:#c6262e;stroke-width:1.2164973;stroke-dasharray:none;stroke:#1e1e1e;stroke-opacity:1;paint-order:stroke markers fill">
+       transform="matrix(2.314558,0,0,1.902022,-17.257452,9.189776)"
+       style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill">
       <path
          id="rect2"
-         style="stroke:#1e1e1e;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill;fill:#c6262e;stroke-width:1.2164973;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
          transform="rotate(48.556219)"
          d="m 22.155779,6.3632264 h 19.75 c 0,0 0,0 0,0 v 2 c 0,0 0,0 0,0 h -19.75 c 0,0 0,0 0,0 z" />
       <path
          id="rect2-5"
-         style="stroke:#1e1e1e;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill;fill:#c6262e;stroke-width:1.2164973;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
          transform="rotate(123.55622)"
          d="m 5.741116,-29.563841 h 19.75 c 0,0 0,0 0,0 v 2 c 0,0 0,0 0,0 h -19.75 c 0,0 0,0 0,0 z" />
     </g>
     <g
-       id="g2-1"
-       transform="matrix(0.90390424,0,0,0.74757588,49.411314,82.033252)"
-       style="fill:#c6262e;stroke:#1e1e1e;stroke-width:0.60824865;stroke-dasharray:none;paint-order:stroke markers fill;stroke-opacity:1">
+       id="g2-0"
+       transform="matrix(2.314558,0,0,1.902022,28.685518,-33.339278)"
+       style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill">
       <path
-         id="rect2-4"
-         style="fill:#c6262e;stroke:#1e1e1e;stroke-width:0.60824865;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill;stroke-opacity:1"
+         id="rect2-0"
+         style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
          transform="rotate(48.556219)"
          d="m 22.155779,6.3632264 h 19.75 c 0,0 0,0 0,0 v 2 c 0,0 0,0 0,0 h -19.75 c 0,0 0,0 0,0 z" />
       <path
-         id="rect2-5-8"
-         style="fill:#c6262e;stroke:#1e1e1e;stroke-width:0.60824865;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill;stroke-opacity:1"
+         id="rect2-5-9"
+         style="fill:#fa000c;fill-opacity:1;stroke:#1e1e1e;stroke-width:1.82961;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
          transform="rotate(123.55622)"
          d="m 5.741116,-29.563841 h 19.75 c 0,0 0,0 0,0 v 2 c 0,0 0,0 0,0 h -19.75 c 0,0 0,0 0,0 z" />
     </g>

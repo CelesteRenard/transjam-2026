@@ -135,25 +135,53 @@ export const levels: Level[] = [
       "dialogue": "Hi ! can you please change my birth flavour. It doesn't suits me any more.",
       "pieces": [
         {
-          "block": "base"
+          "block": "base",
+          "tiles": [
+             "/assets/images/gameplay/tiles/pfp/tile_pfp_2.jpg"
+          ]
         },
         {
-          "block": "base_no_corner"
+          "block": "base_no_corner",
+          "tiles": [
+             "/assets/images/gameplay/tiles/flavors/flavor_name.png",
+          ],
         },
         {
-          "block": "Corner_up_right_no_bottom"
+          "block": "Corner_up_right_no_bottom",
+          "tiles":[
+             "/assets/images/gameplay/tiles/certificate/cakedom_1.png",
+             "/assets/images/gameplay/tiles/certificate/cakedom_2.png",
+             "/assets/images/gameplay/tiles/flavors/strawberry.png"
+          ]
         },
         {
-          "block": "Corner_up_right_no_bottom"
+          "block": "Corner_up_right_no_bottom",
+          "tiles":[
+             "/assets/images/gameplay/tiles/birthday/tile_bd_2.jpg",
+             "/assets/images/gameplay/tiles/birthday/tile_bd_1.jpg",
+             "/assets/images/gameplay/tiles/flavors/blueberry.png"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/flavors/banana.png",
+             "/assets/images/gameplay/tiles/flavors/orange.png"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/birthday/17_06.png",
+             "/assets/images/gameplay/tiles/seal/tile_seal_2.jpg"
+          ]
         },
         {
-          "block": "2_line"
+          "block": "2_line",
+          "tiles" : [
+             "/assets/images/gameplay/tiles/seal/tile_seal_3.jpg",
+             "/assets/images/gameplay/tiles/seal/tile_seal_1.jpg"
+          ]
         }
       ],
       "constraints": [
@@ -205,7 +233,7 @@ export const levels: Level[] = [
           "block": "corner_3_neighbours"
         },
         {
-          "block": "right_L"
+          "block": "right_L_no_bottom"
         },
         {
           "block": "corner_3_neighbours"
@@ -221,27 +249,31 @@ export const levels: Level[] = [
         },
         {
           "text": "Cannot be on bottom row",
-          "block": "right_L"
+          "block": "right_L_no_bottom"
+        },
+        { 
+           "text": "Must be on the left",
+           "block": "base_left"
         }
       ],
       "solution": [
         [
           "corner_3_neighbours",
           "corner_3_neighbours",
-          "right_L",
-          "right_L"
+          "right_L_no_bottom",
+          "right_L_no_bottom"
         ],
         [
           "corner_3_neighbours",
           "corner_3_neighbours",
           "corner_3_neighbours",
-          "right_L"
+          "right_L_no_bottom"
         ],
         [
           "base_left",
           "",
           "corner_3_neighbours",
-          "right_L"
+          "right_L_no_bottom"
         ],
         [
           "",
