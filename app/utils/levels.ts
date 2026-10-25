@@ -172,15 +172,15 @@ export const levels: Level[] = [
         {
           "block": "2_line",
           "tiles" : [
-             "/assets/images/gameplay/tiles/flavors/17_06.png",
-             "/assets/images/gameplay/tiles/flavors/tile_seal_2.png"
+             "/assets/images/gameplay/tiles/birthday/17_06.png",
+             "/assets/images/gameplay/tiles/seal/tile_seal_2.jpg"
           ]
         },
         {
           "block": "2_line",
           "tiles" : [
-             "/assets/images/gameplay/tiles/flavors/tile_seal3.png",
-             "/assets/images/gameplay/tiles/flavors/tile_seal1.png"
+             "/assets/images/gameplay/tiles/seal/tile_seal_3.jpg",
+             "/assets/images/gameplay/tiles/seal/tile_seal_1.jpg"
           ]
         }
       ],
