@@ -138,7 +138,7 @@ export const levels: Level[] = [
           "block": "base"
         },
         {
-          "block": "special_base"
+          "block": "base_no_corner"
         },
         {
           "block": "Corner_up_right"
@@ -160,7 +160,7 @@ export const levels: Level[] = [
         "All 1-squares must be in the center",
         {
           "text": "Must not touch corner pieces",
-          "block": "special_base"
+          "block": "base_no_corner"
         }
       ],
       "solution": [
@@ -179,7 +179,7 @@ export const levels: Level[] = [
         [
           "2_line",
           "",
-          "special_base",
+          "base_no_corner",
           "2_line"
         ],
         [
@@ -198,13 +198,13 @@ export const levels: Level[] = [
           "block": "base"
         },
         {
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "block": "right_L"
         },
         {
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "block": "3_line"
@@ -213,7 +213,7 @@ export const levels: Level[] = [
       "constraints": [
         {
           "text": "Have 3 neighbours",
-          "block": "corner"
+          "block": "corner_3_neighbours"
         },
         {
           "text": "Cannot be on bottom row",
@@ -222,21 +222,21 @@ export const levels: Level[] = [
       ],
       "solution": [
         [
-          "corner",
-          "corner",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
           "right_L",
           "right_L"
         ],
         [
-          "corner",
-          "corner",
-          "corner",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
+          "corner_3_neighbours",
           "right_L"
         ],
         [
           "base",
           "",
-          "corner",
+          "corner_3_neighbours",
           "right_L"
         ],
         [
