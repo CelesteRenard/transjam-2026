@@ -9,7 +9,7 @@ import { canPlace, isSolved, rotate } from "~/utils/shape"
 const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), Math.max(min, max))
 
 export const useBoard = (board: number[][], puzzle: Puzzle) => {
-  const pieces = getPuzzlePieces(puzzle)
+  let pieces = getPuzzlePieces(puzzle)
   const [orientations, setOrientations] = useState<{ shape: Shape; tiles: Tiles }[]>(() =>
     pieces.map(({ shape, tiles }) => ({ shape, tiles }))
   )
@@ -119,5 +119,24 @@ export const useBoard = (board: number[][], puzzle: Puzzle) => {
     position: positions[index],
   }])
 
-  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag: setDragging, endDrag, hoverCell, solved: isSolved(board, placed) }
+  const resetBoard = () => {
+  pieces = getPuzzlePieces(puzzle)
+  setOrientations(() =>
+    pieces.map(({ shape, tiles }) => ({ shape, tiles }))
+  )
+  setPlaced([])
+  setPositions(() =>
+    pieces.map((_, i) => ({
+      x: 0.2 + (i % 4) * 1.6 + ((i * 37) % 28) / 100,
+      y: 0.1 + Math.floor(i / 4) * 1.3 + ((i * 53) % 24) / 100,
+      z: i,
+    }))
+  )
+  setNextId(1)
+  setDragging(null)
+  setHover(null)
+
+  }
+
+  return { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag: setDragging, endDrag, hoverCell, solved: isSolved(board, placed), resetBoard }
 }
