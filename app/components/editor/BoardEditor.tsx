@@ -10,7 +10,7 @@ const NumberField = ({ label, value, onChange }: { label: string; value: number;
       max={10}
       value={value}
       onChange={(e) => onChange(Math.min(10, Math.max(1, Number(e.target.value) || 1)))}
-      className="w-16 rounded border border-gray-400 px-2 py-1 dark:bg-gray-900"
+      className="w-16 rounded border border-gray-400 px-2 py-1"
     />
   </label>
 )
@@ -37,7 +37,7 @@ export const BoardEditor = ({ level, onChange }: { level: Level; onChange: (leve
               type="button"
               onClick={() => toggle(r, c)}
               title={v ? "Playable" : "Blocked"}
-              className={`h-12 w-12 border-2 border-gray-400 ${v ? "bg-white dark:bg-gray-900" : "bg-gray-400 dark:bg-gray-700"}`}
+              className={`h-12 w-12 border-2 border-gray-400 ${v ? "bg-white" : "bg-gray-400"}`}
             />
           ))
         )}

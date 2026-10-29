@@ -40,7 +40,7 @@ export const JsonOutput = ({ level }: { level: Level }) => {
         value={json}
         rows={20}
         onFocus={(e) => e.currentTarget.select()}
-        className="rounded border border-gray-400 p-2 font-mono text-sm dark:bg-gray-900"
+        className="rounded border border-gray-400 p-2 font-mono text-sm"
       />
     </section>
   )

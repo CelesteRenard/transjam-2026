@@ -11,6 +11,56 @@ body {
 }
 
 :root {
-  /* size of one cell, updated from the screen size (see utils/cellSize.ts) */
   --cell: 96px;
+}
+
+.volume-slider {
+  appearance: none;
+  cursor: pointer;
+  border: 3px solid #43301f;
+  background: linear-gradient(to right, #e0c79a var(--fill), #6e5231 var(--fill));
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 3px solid #43301f;
+  background: #e0c79a;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 3px solid #43301f;
+  border-radius: 0;
+  background: #e0c79a;
+}
+
+:focus-visible {
+  outline: 4px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+.stamp {
+  animation: stamp 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(2.4) rotate(-30deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp {
+    animation: none;
+    opacity: 1;
+    transform: rotate(-12deg);
+  }
 }

@@ -1,6 +1,5 @@
-import type { DragEvent } from "react"
 import type { Shape, Tiles } from "~/types/Shape"
-import { allowDrop, getDragPayload, type DragPayload } from "~/utils/drag"
+import type { StartDrag } from "~/utils/drag"
 import { TrayPiece } from "./TrayPiece"
 
 type Props = {
@@ -12,25 +11,14 @@ type Props = {
     tiles: Tiles
     position: { x: number; y: number; z: number }
   }[]
+  selectedPiece?: number | null
   onRotate: (index: number) => void
-  onDropPiece: (payload: DragPayload, x: number, y: number, width: number, height: number) => void
-  onDragStart: (payload: DragPayload) => void
-  onDragEnd: () => void
+  onDragStart: StartDrag
 }
 
-export const Tray = ({ pieces, onRotate, onDropPiece, onDragStart, onDragEnd }: Props) => {
-  const handleDrop = (e: DragEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    const rect = e.currentTarget.getBoundingClientRect()
-    onDropPiece(getDragPayload(e), e.clientX - rect.left, e.clientY - rect.top, rect.width, rect.height)
-  }
-
+export const Tray = ({ pieces, selectedPiece, onRotate, onDragStart }: Props) => {
   return (
-    <div
-      onDragOver={allowDrop}
-      onDrop={handleDrop}
-      className="relative h-full w-full"
-    >
+    <div data-tray className="relative h-full w-full">
       {pieces.map(({ index, name, rotable, shape, tiles, position }) => (
         <TrayPiece
           key={name + index}
@@ -38,10 +26,10 @@ export const Tray = ({ pieces, onRotate, onDropPiece, onDragStart, onDragEnd }: 
           shape={shape}
           tiles={tiles}
           rotable={rotable}
+          selected={selectedPiece === index}
           position={position}
           onRotate={() => onRotate(index)}
           onDragStart={onDragStart}
-          onDragEnd={onDragEnd}
         />
       ))}
     </div>

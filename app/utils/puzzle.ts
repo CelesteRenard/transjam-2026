@@ -6,7 +6,7 @@ const cellCount = (shape: number[][]) => shape.flat().filter(Boolean).length
 
 const findBlock = (name: string) => blocks.find((b) => b.name.toLowerCase() === name.toLowerCase())
 
-const buildTiles = (shape: number[][], picto?: string, images: string[] = []): Tiles => {
+export const buildTiles = (shape: number[][], picto?: string, images: string[] = []): Tiles => {
   let n = 0
   return shape.map((line) =>
     line.map((v) => {

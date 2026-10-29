@@ -8,7 +8,7 @@ export const ShapePreview = ({
 }: {
   shape: Shape
   tiles: Tiles
-  onGrab: (r: number, c: number, fx: number, fy: number) => void
+  onGrab?: (r: number, c: number, fx: number, fy: number) => void
 }) => (
   <div className="grid" style={{ gridTemplateColumns: `repeat(${shape[0].length}, var(--cell))` }}>
     {shape.flatMap((line, r) =>
@@ -17,9 +17,9 @@ export const ShapePreview = ({
           <TileView
             key={`${r}-${c}`}
             tile={tiles[r][c]}
-            onMouseDown={(e) => {
+            onPointerDown={(e) => {
               const { offsetX, offsetY } = e.nativeEvent
-              onGrab(r, c, offsetX / e.currentTarget.offsetWidth, offsetY / e.currentTarget.offsetHeight)
+              onGrab?.(r, c, offsetX / e.currentTarget.offsetWidth, offsetY / e.currentTarget.offsetHeight)
             }}
           />
         ) : (

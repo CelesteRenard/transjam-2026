@@ -172,4 +172,59 @@ export const blocks : b = [
       [1]
     ]
   },
+  {
+    name: "1x2_frog",
+    picto: "",
+    rotable: true,
+    shape: [
+      [1],
+      [1]
+    ]
+  },
+  {
+    name: "L_frog",
+    picto: "",
+    rotable: true,
+    shape: [
+      [1,0],
+      [1, 0],
+      [1, 1]
+    ]
+  },
+  {
+    name: "L_frog_reverse",
+    picto: "/assets/images/ui/instructions/touch_all.svg",
+    rotable: true,
+    shape: [
+     [0, 1],
+     [0, 1],
+     [1, 1]
+    ]
+  },
+  {
+    name: "base_frog_1",
+    picto: "",
+    rotable: false,
+    shape: [
+      [1]
+    ]
+  },
+  {
+    name: "base_frog_2",
+    picto: "/assets/images/ui/instructions/3_neighbours.svg",
+    rotable: false,
+    shape: [
+      [1]
+    ]
+  },
+  {
+    name: "1x2_frog_2",
+    picto: "",
+    rotable: true,
+    shape: [
+      [1],
+      [1]
+    ]
+  },
 ]
+

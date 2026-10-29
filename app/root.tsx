@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { LiveRegion } from "./components/LiveRegion"
 import { useMusic } from "./hooks/useMusic";
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -35,6 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <LiveRegion />
         <ScrollRestoration />
         <Scripts />
       </body>

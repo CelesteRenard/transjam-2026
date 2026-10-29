@@ -101,6 +101,124 @@ export const levels: Level[] = [
     ]
   },
   {
+  "name": "frog",
+  "level": 2,
+  "board": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1
+    ]
+  ],
+  "puzzles": [
+    {
+      "actor": "/assets/images/gameplay/actors/monkey.png",
+      "dialogue": "croak croak croak croak croak",
+      "pieces": [
+        {
+          "block": "1x2_frog",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/frog-t.png",
+            "/assets/images/gameplay/tiles/frog/frog-b.png"
+          ]
+        },
+        {
+          "block": "L_frog_reverse",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/frog-birth.png",
+            "/assets/images/gameplay/tiles/frog/frog-birth-day.png",
+            "/assets/images/gameplay/tiles/frog/frog-birth-year.png",
+            "/assets/images/gameplay/tiles/frog/frog-birth-month.png"
+          ]
+        },
+        {
+          "block": "base_frog_2",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/nenufar.png"
+          ]
+        },
+        {
+          "block": "L_frog",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/music-4.png",
+            "/assets/images/gameplay/tiles/frog/music1.png",
+            "/assets/images/gameplay/tiles/frog/music2.png",
+            "/assets/images/gameplay/tiles/frog/music3.png"
+          ]
+        },
+        {
+          "block": "base_frog_1",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/water.png"
+          ]
+        },
+        {
+          "block": "1x2_frog_2",
+          "tiles": [
+            "/assets/images/gameplay/tiles/frog/camera.png",
+            "/assets/images/gameplay/tiles/frog/pics.png"
+          ]
+        }
+      ],
+      "constraints": [
+        {
+          "text": "Must have Exactly 3 Adjacent Unique Pieces",
+          "block": "base_frog_2"
+        },
+        {
+          "text": "Must touch all other pieces",
+          "block": "L_frog_reverse"
+        }
+      ],
+      "solution": [
+        [
+          "1x2_frog",
+          "L_frog_reverse",
+          "L_frog_reverse",
+          "base_frog_1"
+        ],
+        [
+          "1x2_frog",
+          "L_frog_reverse",
+          "L_frog",
+          "L_frog"
+        ],
+        [
+          "base_frog_2",
+          "L_frog_reverse",
+          "",
+          "L_frog"
+        ],
+        [
+          "1x2_frog_2",
+          "1x2_frog_2",
+          "",
+          "L_frog"
+        ]
+      ]
+    }
+  ]
+},
+  {
   "name": "Muffins",
   "level": 3,
   "board": [

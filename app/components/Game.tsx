@@ -1,14 +1,18 @@
 import { useBoard } from "~/hooks/useBoard"
+import { useKeyboard } from "~/hooks/useKeyboard"
 import type { Level, Puzzle } from "~/types/Level"
 import { useCellSize } from "~/utils/cellSize"
 import { Board } from "./Board"
+import { DragGhost } from "./DragGhost"
 import { ConstraintNote } from "./ConstraintNote"
+import { PanelButton } from "./Modal"
 import { Stage } from "./Stage"
 import { Tray } from "./Tray"
 
 export const Game = ({ level, puzzle, onNext }: { level: Level; puzzle: Puzzle, onNext: () => void }) => {
-  const { trayPieces, placed, preview, rotateShape, drop, dropInTray, rotatePlaced, startDrag, endDrag, hoverCell, solved } =
-    useBoard(level.board, puzzle)
+  const api = useBoard(level.board, puzzle)
+  const { trayPieces, placed, preview, dragging, rotateShape, rotatePlaced, startDrag, solved } = api
+  const { cursor, selectedPiece } = useKeyboard(level, puzzle, api)
 
   useCellSize()
 
@@ -20,31 +24,34 @@ export const Game = ({ level, puzzle, onNext }: { level: Level; puzzle: Puzzle, 
           {!solved &&
             <Tray
               pieces={trayPieces}
+              selectedPiece={selectedPiece}
               onRotate={rotateShape}
-              onDropPiece={dropInTray}
               onDragStart={startDrag}
-              onDragEnd={endDrag}
             />
           }
         </div>
         <div className="relative flex items-center justify-center">
-          <Board
-            board={level.board}
-            placed={placed}
-            preview={preview}
-            onDropPiece={drop}
-            onHover={hoverCell}
-            onRotatePiece={rotatePlaced}
-            onDragStart={startDrag}
-            onDragEnd={endDrag}
-          />
+          <div className={`transition-opacity duration-500 ${solved ? "opacity-50" : ""}`}>
+            <Board
+              board={level.board}
+              placed={placed}
+              preview={preview}
+              cursor={cursor}
+              onRotatePiece={rotatePlaced}
+              onDragStart={startDrag}
+            />
+          </div>
           {solved && (
-            <p className="absolute inset-x-0 bottom-8 text-center text-xl font-semibold text-emerald-500">
-              Bravo, niveau réussi !
-              <button onClick={onNext} className="ml-4 rounded bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-600">
-                Next puzzle
-              </button>
-            </p>
+            <img
+              src="/assets/images/gameplay/stamps/stamp.jpg"
+              alt="Official approval"
+              className="stamp pointer-events-none absolute z-30 aspect-square h-1/4 mix-blend-multiply"
+            />
+          )}
+          {solved && (
+            <PanelButton autoFocus onClick={onNext} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+              Next
+            </PanelButton>
           )}
         </div>
         <div className="flex flex-col gap-4 overflow-y-auto p-4">
@@ -53,6 +60,7 @@ export const Game = ({ level, puzzle, onNext }: { level: Level; puzzle: Puzzle, 
           ))}
         </div>
       </div>
+      {dragging?.source === "pointer" && <DragGhost drag={dragging} />}
     </div>
   )
 }
